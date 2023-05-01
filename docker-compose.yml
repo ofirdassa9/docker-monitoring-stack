@@ -127,3 +127,5 @@ volumes:
 networks:
   monitoring:
     name: monitoring
+  nginx-reverse-proxy_default:
+    name: nginx-reverse-proxy_default
