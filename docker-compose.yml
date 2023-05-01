@@ -28,8 +28,6 @@ services:
       - grafana-data:/var/lib/grafana
     depends_on:
       - prometheus
-    ports:
-      - 3000:3000
     networks:
       - monitoring
       - nginx-reverse-proxy_default
@@ -54,8 +52,6 @@ services:
       - prometheus-data:/prometheus
     depends_on:
       - alertmanager
-    ports:
-      - 9090:9090
     networks:
       - monitoring
       - nginx-reverse-proxy_default
@@ -104,8 +100,6 @@ services:
       - '--web.external-url=http://localhost:9093'
     volumes:
       - ${WORK_DIR}/configs/alertmanager/alertmanager-fallback-config.yml:/etc/alertmanager/config.yml
-    ports:
-      - 9093:9093
     networks:
       - monitoring
       - nginx-reverse-proxy_default
