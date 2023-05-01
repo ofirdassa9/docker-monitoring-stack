@@ -117,6 +117,8 @@ services:
     cpus: 0.5
     mem_limit: 512m
     logging: *default-logging
+    networks:
+     - monitoring
 
 volumes:
   grafana-data: {}
