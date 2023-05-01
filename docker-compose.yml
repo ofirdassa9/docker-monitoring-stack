@@ -114,8 +114,6 @@ services:
   redis:
     image: redis:${REDIS_VERSION:-6}
     container_name: redis
-    ports:
-      - 6379:6379
     cpus: 0.5
     mem_limit: 512m
     logging: *default-logging
