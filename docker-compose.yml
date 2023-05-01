@@ -60,7 +60,7 @@ services:
     logging: *default-logging
 
   cadvisor:
-    image: gcr.io/cadvisor/cadvisor:${CADVISOR_VERSION:-v0.46.0}
+    image: gcr.io/cadvisor/cadvisor-arm:${CADVISOR_VERSION:-v0.46.0}
     container_name: cadvisor
     restart: unless-stopped
     privileged: true
