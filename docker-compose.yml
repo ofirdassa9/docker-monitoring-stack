@@ -24,6 +24,7 @@ services:
       - GF_SMTP_HOST=${SMTP_HOST}
       - GF_SMTP_USER=${SMTP_USER}
       - GF_SMTP_PASSWORD=${SMTP_PASSWORD}
+      - GF_SMTP_FROM_ADDRESS=${SMTP_FROM_ADDR}
     volumes:
       - ${WORK_DIR}/configs/grafana/provisioning/dashboards.yml:/etc/grafana/provisioning/dashboards/provisioning-dashboards.yaml:ro
       - ${WORK_DIR}/configs/grafana/provisioning/datasources.yml:/etc/grafana/provisioning/datasources/provisioning-datasources.yaml:ro
